@@ -4,3 +4,6 @@ pyyaml
 tqdm
 numpy
 pillow
+
+# A captcha library that generates audio and image CAPTCHAs.
+captcha

@@ -213,9 +213,12 @@ class Net(torch.nn.Module):
         return torch.randn(1, self.image_channel, h, w, device='cpu')
 
     def export_onnx(self, net, dummy_input, graph_path, input_names, output_names, dynamic_ax):
+        # torch.onnx.export(net, dummy_input, graph_path, export_params=True, verbose=False,
+        #                   input_names=input_names, output_names=output_names, dynamic_axes=dynamic_ax,
+        #                   opset_version=12, do_constant_folding=True, _retain_param_name=False)
         torch.onnx.export(net, dummy_input, graph_path, export_params=True, verbose=False,
                           input_names=input_names, output_names=output_names, dynamic_axes=dynamic_ax,
-                          opset_version=12, do_constant_folding=True, _retain_param_name=False)
+                          opset_version=12, do_constant_folding=True)
 
 
     @staticmethod
