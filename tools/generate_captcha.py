@@ -32,6 +32,7 @@ if __name__ == "__main__":
     data_dir = "C:/Users/Administrator/Documents/GitHub/dddd_trainer/data/images_set/"
     # generate_captcha(data_dir)
 
+    # TODO use threading
     count = 0
     while count < 10000:
         generate_captcha(data_dir)
