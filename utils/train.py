@@ -1,4 +1,5 @@
 import json
+import sys
 import os
 import random
 import time
@@ -158,7 +159,7 @@ class Train:
                             f.write(json.dumps({"charset": self.net.charset, "image": self.resize, "word": self.word, 'channel': self.ImageChannel}, ensure_ascii=False))
                         logger.info("\nExport Finished!Using Time: {}min".format(
                             str(int(int(self.now_time) - int(self.start_time)) / 60)))
-                        exit()
+                        sys.exit()
 
             self.epoch += 1
 
